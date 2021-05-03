@@ -6,7 +6,7 @@ description: Piotr Woźniak - O mnie
 
 # Praca
 
-W telegraficznym skrócie: zacząłem od Oracle - tj. programowałem aplikacje w Oracle APEX i natywne ETL z użyciem PL/SQL. Później zainteresowałem się chmurą i Pythonem. Dzięki własnemu zaangażowaniu i zaufaniu wielu osób, otrzymałem szansę wykazać się w Pythonie, chmurze i bezpośredniej pracy z klientem polskim i zagranicznym (aż po C-level). Obecnie działam jako konsultant GCP.
+W telegraficznym skrócie: zacząłem od Oracle - tj. programowałem aplikacje w Oracle APEX i natywne ETL z użyciem PL/SQL. Później, dzięki własnemu zaangażowaniu i zaufaniu wielu osób, otrzymałem szansę aby wykazać się w Pythonie, chmurze i bezpośredniej pracy z klientem - aż po C-level. Obecnie działam jako konsultant GCP.
 
 Jestem zwolennikiem diligent practice pod dyktatem pomodoro i spersonalizowanego GTD.
 
