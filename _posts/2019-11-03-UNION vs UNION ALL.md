@@ -8,7 +8,7 @@ tags: [DB, SQL]
 
 ## Są 4 operatory zbiorowe
 
-Operatory zbiorowe (```Set Operations```) są dobrze ilustrowane przez diagramy Venna (w przeciwieństwie do ```JOINów```)<br/>Wspomniałem już o tym [w tym poście](https://piotrwozniak.net/2019-02-10-greatest_n_per_group/)
+Operatory zbiorowe (```Set Operations```) są dobrze ilustrowane przez diagramy Venna (w przeciwieństwie do ```JOINów```)<br/>Wspomniałem już o tym [w tym poście](https://piotrwozniak.net/greatest_n_per_group/)
 
 <a href="/assets/img/set_operators_055.png"><img src="/assets/img/set_operators_055.png" alt="set_operators_055.png" target="_blank"></a>
 

@@ -8,7 +8,7 @@ tags: [DB, SQL, PL/SQL]
 
 ```Pipelined Function``` to szczególny rodzaj  ```Table Function```
 
-O ```Table Functions``` napisałem [tutaj](https://piotrwozniak.net/2019-06-26-table_functions/).
+O ```Table Functions``` napisałem [tutaj](https://piotrwozniak.net/table_functions/).
 
 
 {: .box-note}

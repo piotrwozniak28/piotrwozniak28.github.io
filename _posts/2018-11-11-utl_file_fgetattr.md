@@ -234,7 +234,7 @@ END FILE_API;
 
 | Wiersz | Opis |
 |:------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 58-66 | Obsługuję wyjątki za pomocą wcześniej zdefiniowanej procedury - więcej szczegółów w [tym artykule](https://piotrwozniak.net/2019-03-01-obsluga-bledow/). |
+| 58-66 | Obsługuję wyjątki za pomocą wcześniej zdefiniowanej procedury - więcej szczegółów w [tym artykule](https://piotrwozniak.net/obsluga-bledow/). |
 
 Kod do uruchomienia procedury wewnątrz pakietu:
 
