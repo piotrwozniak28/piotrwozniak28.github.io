@@ -35,7 +35,7 @@ Na marginesie - sam Steven poleca guidelines od Trivadis.
 #### Steven
 
 {: .box-note}
-<a href="/assets/img/guidelines_065.png"><img src="/assets/img/guidelines_065.png" alt="guidelines_065.png" target="_blank"></a><br/>
+<a href="/assets/img/guidelines_065.png"><img src="{{ 'assets/img/guidelines_065.png' | relative_url }}" alt="guidelines_065.png" target="_blank"></a><br/>
 [Pdf z guidelines od Stevena](https://community.oracle.com/docs/DOC-1007838)
 
 ---
