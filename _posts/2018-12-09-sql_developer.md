@@ -2,7 +2,7 @@
 layout: post
 title: Mój SQL Developer
 subtitle: Bez tych ustawień nie zaczynam pracy
-image: /img/sql_developer_avatar.png
+image: /assets/img/sql_developer_avatar.png
 tags: [Workflow]
 
 ---

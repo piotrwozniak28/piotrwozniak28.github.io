@@ -2,7 +2,7 @@
 layout: post
 title: UNION vs UNION ALL
 subtitle: Operatory zbiorowe
-image: /img/set_operators_050.png
+image: /assets/img/set_operators_050.png
 tags: [DB, SQL]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: Normalizacja
 subtitle: 1NF czy nie 1NF
-image: /img/normalizacja_avatar.jpg
+image: /assets/img/normalizacja_avatar.jpg
 tags: [DB]
 ---
 

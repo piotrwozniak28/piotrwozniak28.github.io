@@ -2,7 +2,7 @@
 layout: post
 title: Obsługa błędów
 subtitle: Każdy jest wyjątkowy...
-image: /img/obsluga_wyjatkow_050.jpg
+image: /assets/img/obsluga_wyjatkow_050.jpg
 tags: [DB, PL/SQL]
 ---
 

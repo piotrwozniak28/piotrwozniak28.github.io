@@ -2,7 +2,7 @@
 layout: post
 title: Duplikaty
 subtitle: ...i ich usuwanie
-image: /img/duplikaty_050.jpg
+image: /assets/img/duplikaty_050.jpg
 tags: [DB, SQL]
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: SQL and PL/SQL Coding Standards
 subtitle: Trzeba mieć jakieś standardy
-image: /img/guidelines_050.jpg
+image: /assets/img/guidelines_050.jpg
 tags: [SQL, PL/SQL, Workflow]
 published: true
 ---

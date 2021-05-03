@@ -2,7 +2,7 @@
 layout: post
 title: UTL_FILE.PUT_LINE
 subtitle: Zapisz, bo zapomnisz
-image: /img/utl_file_avatar.png
+image: /assets/img/utl_file_avatar.png
 tags: [DB, PL/SQL]
 ---
 

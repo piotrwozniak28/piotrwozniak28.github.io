@@ -2,7 +2,7 @@
 layout: post
 title: Kolekcje APEX
 subtitle: Select2 używając APEX Collections
-image: /img/apex_kolekcje_050.jpg
+image: /assets/img/apex_kolekcje_050.jpg
 tags: [DB, SQL, PL/SQL, APEX]
 ---
 

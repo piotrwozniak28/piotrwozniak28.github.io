@@ -2,7 +2,7 @@
 layout: post
 title: Hierarchiczne queries
 subtitle: Who's the boss?
-image: /img/connect_by_050.png
+image: /assets/img/connect_by_050.png
 tags: [DB, SQL]
 ---
 

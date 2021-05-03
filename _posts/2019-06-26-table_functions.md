@@ -2,7 +2,7 @@
 layout: post
 title: Table functions
 subtitle: SELECT * FROM TABLE (...);
-image: /img/table_functions_050.png
+image: /assets/img/table_functions_050.png
 tags: [DB, SQL, PL/SQL]
 ---
 

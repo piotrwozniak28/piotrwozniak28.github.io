@@ -2,7 +2,7 @@
 layout: post
 title: greatest-n-per-group
 subtitle: One query to select them all
-image: /img/greatest-n-per-group_avatar.jpg
+image: /assets/img/greatest-n-per-group_avatar.jpg
 tags: [DB, SQL]
 ---
 

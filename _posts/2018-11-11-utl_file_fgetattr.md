@@ -2,7 +2,7 @@
 layout: post
 title: UTL_FILE.FGETATTR
 subtitle: Był sobie plik...
-image: /img/utl_file_getattr_avatar.png
+image: /assets/img/utl_file_getattr_avatar.png
 tags: [DB, PL/SQL]
 ---
 W dzisiejszych czasach łatwo stać się ofiarą manipulacji 

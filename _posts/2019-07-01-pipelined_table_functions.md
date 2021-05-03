@@ -2,7 +2,7 @@
 layout: post
 title: Pipelined Table Functions
 subtitle: PIPE ROW!
-image: /img/pipelined_table_functions_050.png
+image: /assets/img/pipelined_table_functions_050.png
 tags: [DB, SQL, PL/SQL]
 ---
 
