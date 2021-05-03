@@ -22,7 +22,6 @@ Jestem zwolennikiem diligent practice pod dyktatem pomodoro i spersonalizowanego
 - Przez rok prowadziłem 2 kluby boksu tajskiego.
 
 #### Toastmasters
-- Tu poznałem jedne z najbliższych mi osób.
-- Mam nadzieję, że łatwiej mnie teraz zrozumieć:)
+- Tu bardziej poznałem siebie i jedne z najbliższych mi osób.
 
 #### Minimalizm
