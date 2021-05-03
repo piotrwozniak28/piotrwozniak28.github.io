@@ -2,7 +2,6 @@
 layout: page
 title: O mnie
 description: Piotr Woźniak - O mnie
-subtitle: Co tam u mnie
 ---
 
 # Praca
