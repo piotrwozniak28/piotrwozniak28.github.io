@@ -2,7 +2,7 @@
 layout: post
 title: UTL_FILE.FGETATTR
 subtitle: Był sobie plik...
-image: /assets/img/utl_file_getattr_avatar.png
+thumbnail-img: /assets/img/utl_file_getattr_avatar.png
 tags: [DB, PL/SQL]
 ---
 W dzisiejszych czasach łatwo stać się ofiarą manipulacji 
@@ -17,7 +17,7 @@ Jeśli **Plik** już istnieje, to z UTL_FILE wykonasz na nim te akcje:
 A jeśli **Plik** dopiero ma istnieć:
 - ...to go stworzysz!
 
-<a href="/img/utl_file_050.jpg"><img src="/img/utl_file_050.jpg" alt="utl_file_050.jpg" target="_blank"></a>
+<a href="/assets/img/utl_file_050.jpg"><img src="/assets/img/utl_file_050.jpg" alt="utl_file_050.jpg" target="_blank"></a>
 
 ## Let's get to business
 

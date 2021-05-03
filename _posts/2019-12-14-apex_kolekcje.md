@@ -2,7 +2,7 @@
 layout: post
 title: Kolekcje APEX
 subtitle: Select2 używając APEX Collections
-image: /assets/img/apex_kolekcje_050.jpg
+thumbnail-img: /assets/img/apex_kolekcje_050.jpg
 tags: [DB, SQL, PL/SQL, APEX]
 ---
 
@@ -17,11 +17,11 @@ Przedstawię krótko, jak można zaimplementować go w swojej aplikacji.
 
 Przyjmijmy, że chcemy mieć możliwość zapraszania osób na spotkania.<br/>Lista dostępnych do wyboru imion+nazwisk powinna się zawężać w miarę podawania kolejnych znaków (podobnie jak np. przy tworzeniu nowej grupy na Facebooku lub nowym wydarzeniu w Google Calendar)
 
-<a href="/img/apex_kolekcje_055.png"><img src="/img/apex_kolekcje_055.png" alt="apex_kolekcje_055.png" target="_blank"></a>
+<a href="/assets/img/apex_kolekcje_055.png"><img src="/assets/img/apex_kolekcje_055.png" alt="apex_kolekcje_055.png" target="_blank"></a>
 
 W naszym przykładzie, Select2 ułatwi zebranie ID pracowników do danego Page Item.
 
-<a href="/img/apex_kolekcje_060.png"><img src="/img/apex_kolekcje_060.png" alt="apex_kolekcje_060.png" target="_blank"></a>
+<a href="/assets/img/apex_kolekcje_060.png"><img src="/assets/img/apex_kolekcje_060.png" alt="apex_kolekcje_060.png" target="_blank"></a>
 
 Kiedy będziemy już mieli ID w Itemie, to wystarczy je tylko przekazać do obiektu (w naszym przypadku będzie to APEX Collection, jednak mogłaby to być zwyczajna tabela) i wyświetlić - np. w Interactive Report lub Interactive Grid.
 

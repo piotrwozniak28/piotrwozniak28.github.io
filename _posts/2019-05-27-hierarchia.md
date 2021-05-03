@@ -2,7 +2,7 @@
 layout: post
 title: Hierarchiczne queries
 subtitle: Who's the boss?
-image: /assets/img/connect_by_050.png
+thumbnail-img: /assets/img/connect_by_050.png
 tags: [DB, SQL]
 ---
 
@@ -27,7 +27,7 @@ SELECT e1.employee_id
  ORDER BY e1.manager_id NULLS FIRST;
 {% endhighlight %}
 
-<a href="/img/connect_by_051.png"><img src="/img/connect_by_051.png" alt="connect_by_051.png" target="_blank"></a>
+<a href="/assets/img/connect_by_051.png"><img src="/assets/img/connect_by_051.png" alt="connect_by_051.png" target="_blank"></a>
 
 Wystarczył self-join. Trochę więcej niż "SELECT gwiazdka" ale nadal nic skomplikowanego.
 
@@ -54,7 +54,7 @@ Poniżej prosty przykład query z wykorzystaniem ```START WITH``` i ```CONNECT B
 CONNECT BY PRIOR employee_id =  manager_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_054.png"><img src="/img/connect_by_054.png" alt="connect_by_054.png" target="_blank"></a>
+<a href="/assets/img/connect_by_054.png"><img src="/assets/img/connect_by_054.png" alt="connect_by_054.png" target="_blank"></a>
 
 Różnica pomiędzy powyższym a "konwencjonalnym" query, zawiera się w 3 wierszach (8, 9, 5)
 
@@ -89,7 +89,7 @@ CONNECT BY PRIOR employee_id =  manager_id
              AND employee_id/manager_id = 0;
 {% endhighlight %}
 
-<a href="/img/connect_by_055.png"><img src="/img/connect_by_055.png" alt="connect_by_055.png" target="_blank"></a>
+<a href="/assets/img/connect_by_055.png"><img src="/assets/img/connect_by_055.png" alt="connect_by_055.png" target="_blank"></a>
 
 ---
 
@@ -107,7 +107,7 @@ Okej, zobaczmy kto pracuje bezpośrednio pod Stevenem Kingiem.
 CONNECT BY PRIOR employee_id =  manager_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_060.png"><img src="/img/connect_by_060.png" alt="connect_by_060.png" target="_blank"></a>
+<a href="/assets/img/connect_by_060.png"><img src="/assets/img/connect_by_060.png" alt="connect_by_060.png" target="_blank"></a>
 
 Lista została utworzona w następujący sposób:
 1. Zwróć **wiersze** spełniające warunek ```START WITH manager_id IS NULL```.
@@ -132,7 +132,7 @@ Najłatwiej to zrozumieć przez analizę wyników query. Poniżej "odsłonięte"
 CONNECT BY PRIOR employee_id =  manager_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_065.png"><img src="/img/connect_by_065.png" alt="connect_by_065.png" target="_blank"></a>
+<a href="/assets/img/connect_by_065.png"><img src="/assets/img/connect_by_065.png" alt="connect_by_065.png" target="_blank"></a>
 
 {% highlight sql linenos %}
  SELECT first_name
@@ -146,7 +146,7 @@ CONNECT BY PRIOR employee_id =  manager_id;
 CONNECT BY PRIOR employee_id =  manager_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_070.png"><img src="/img/connect_by_070.png" alt="connect_by_070.png" target="_blank"></a>
+<a href="/assets/img/connect_by_070.png"><img src="/assets/img/connect_by_070.png" alt="connect_by_070.png" target="_blank"></a>
 
 Przy używaniu funkcji hierarchicznych, Oracle umożliwia nam użycie dodatkowych funkcji - np. ```SYS_CONNECT_BY_PATH```, która zwraca ścieżkę dla danej wartości - rozpoczynając od root.
 
@@ -163,7 +163,7 @@ Przy używaniu funkcji hierarchicznych, Oracle umożliwia nam użycie dodatkowyc
 CONNECT BY PRIOR employee_id =  manager_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_075.png"><img src="/img/connect_by_075.png" alt="connect_by_075.png" target="_blank"></a>
+<a href="/assets/img/connect_by_075.png"><img src="/assets/img/connect_by_075.png" alt="connect_by_075.png" target="_blank"></a>
 
 ---
 
@@ -193,7 +193,7 @@ INSERT INTO hierarchy (id, name, boss_id) VALUES (3, 'C', '2');
 CONNECT BY PRIOR id = boss_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_080.png"><img src="/img/connect_by_080.png" alt="connect_by_080.png" target="_blank"></a>
+<a href="/assets/img/connect_by_080.png"><img src="/assets/img/connect_by_080.png" alt="connect_by_080.png" target="_blank"></a>
 
  Oracle umożliwia użycie parametru ```CONNECT BY **NOCYCLE**```, który spowoduje zwrócenie danych (domyślnie taki układ spowodowałby błąd).
 
@@ -206,7 +206,7 @@ CONNECT BY PRIOR id = boss_id;
 CONNECT BY NOCYCLE PRIOR id = boss_id;
 {% endhighlight %}
 
-<a href="/img/connect_by_085.png"><img src="/img/connect_by_085.png" alt="connect_by_085.png" target="_blank"></a>
+<a href="/assets/img/connect_by_085.png"><img src="/assets/img/connect_by_085.png" alt="connect_by_085.png" target="_blank"></a>
 
 Identyfikacja wiersza, który zawiera pętlę, jest możliwa dzięki pseudokolumnie ```CONNECT_BY_ISCYCLE```.
 
@@ -221,4 +221,4 @@ Dzięki CONNECT BY możemy wygenerować dowolną liczbę wierszy. Wystarczy, że
 CONNECT BY level <= 100;
 {% endhighlight %}
 
-<a href="/img/connect_by_090.png"><img src="/img/connect_by_090.png" alt="connect_by_090.png" target="_blank"></a>
+<a href="/assets/img/connect_by_090.png"><img src="/assets/img/connect_by_090.png" alt="connect_by_090.png" target="_blank"></a>

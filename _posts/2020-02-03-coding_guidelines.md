@@ -2,7 +2,7 @@
 layout: post
 title: SQL and PL/SQL Coding Standards
 subtitle: Trzeba mieć jakieś standardy
-image: /assets/img/guidelines_050.jpg
+thumbnail-img: /assets/img/guidelines_050.jpg
 tags: [SQL, PL/SQL, Workflow]
 published: true
 ---
@@ -29,13 +29,13 @@ Na marginesie - sam Steven poleca guidelines od Trivadis.
 #### Trivadis
 
 {: .box-note}
-<a href="/img/guidelines_061.png"><img src="/img/guidelines_061.png" alt="guidelines_061.png" target="_blank"></a>
-<a href="/img/guidelines_062.png"><img src="/img/guidelines_062.png" alt="guidelines_062.png" target="_blank"></a>
+<a href="/assets/img/guidelines_061.png"><img src="/assets/img/guidelines_061.png" alt="guidelines_061.png" target="_blank"></a>
+<a href="/assets/img/guidelines_062.png"><img src="/assets/img/guidelines_062.png" alt="guidelines_062.png" target="_blank"></a>
 
 #### Steven
 
 {: .box-note}
-<a href="/img/guidelines_065.png"><img src="/img/guidelines_065.png" alt="guidelines_065.png" target="_blank"></a><br/>
+<a href="/assets/img/guidelines_065.png"><img src="/assets/img/guidelines_065.png" alt="guidelines_065.png" target="_blank"></a><br/>
 [Pdf z guidelines od Stevena](https://community.oracle.com/docs/DOC-1007838)
 
 ---
@@ -46,12 +46,12 @@ Przykłady są prezentowane w konwencji źle/dobrze - od razu nasuwa mi się sko
 #### Trivadis
 
 {: .box-note}
-<a href="/img/guidelines_063.png"><img src="/img/guidelines_063.png" alt="guidelines_063.png" target="_blank"></a>
+<a href="/assets/img/guidelines_063.png"><img src="/assets/img/guidelines_063.png" alt="guidelines_063.png" target="_blank"></a>
 
 #### Google
 
 {: .box-note}
-<a href="/img/guidelines_064.png"><img src="/img/guidelines_064.png" alt="guidelines_064.png" target="_blank"></a>
+<a href="/assets/img/guidelines_064.png"><img src="/assets/img/guidelines_064.png" alt="guidelines_064.png" target="_blank"></a>
 
 Standardy są udostępniane na licencji Apache License 2.0.
 

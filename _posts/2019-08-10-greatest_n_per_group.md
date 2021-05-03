@@ -2,7 +2,7 @@
 layout: post
 title: greatest-n-per-group
 subtitle: One query to select them all
-image: /assets/img/greatest-n-per-group_avatar.jpg
+thumbnail-img: /assets/img/greatest-n-per-group_avatar.jpg
 tags: [DB, SQL]
 ---
 
@@ -26,7 +26,7 @@ SELECT MAX (salary) AS max_salary
   FROM employees;
 ```
 
-<a href="/img/greatest-n-per-group_050.png"><img src="/img/greatest-n-per-group_050.png" alt="greatest-n-per-group_050.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_050.png"><img src="/assets/img/greatest-n-per-group_050.png" alt="greatest-n-per-group_050.png" target="_blank"></a>
 
 ### 2. Jakie są najwyższe zarobki w danych oddziałach firmy?
 
@@ -38,7 +38,7 @@ SELECT department_id
  ORDER BY department_id;
 ```
 
-<a href="/img/greatest-n-per-group_051.png"><img src="/img/greatest-n-per-group_051.png" alt="greatest-n-per-group_051.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_051.png"><img src="/assets/img/greatest-n-per-group_051.png" alt="greatest-n-per-group_051.png" target="_blank"></a>
 
 ### 3. Jakie są najwyższe zarobki w danych oddziałach firmy?<br/>Wyświetl wszystkie informacje o osobach, które tyle zarabiają.
 
@@ -53,7 +53,7 @@ SELECT department_id
  ORDER BY department_id;
 ```
 
-<a href="/img/greatest-n-per-group_060.png"><img src="/img/greatest-n-per-group_060.png" alt="greatest-n-per-group_060.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_060.png"><img src="/assets/img/greatest-n-per-group_060.png" alt="greatest-n-per-group_060.png" target="_blank"></a>
 
 Żeby wykonać takie query, musielibyśmy dodać też 2. kryterium grupowania.
 
@@ -67,7 +67,7 @@ SELECT department_id
  ORDER BY department_id;
 ```
 
-<a href="/img/greatest-n-per-group_061.png"><img src="/img/greatest-n-per-group_061.png" alt="greatest-n-per-group_063.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_061.png"><img src="/assets/img/greatest-n-per-group_061.png" alt="greatest-n-per-group_063.png" target="_blank"></a>
 
 {: .box-error}
 **W REZULTACIE:** wyniki zostaną okrojone tylko o te osoby, które dla danego ```department_id``` otrzymują mniejsze ```salary``` od osoby z tym samym ```first_name```
@@ -103,7 +103,7 @@ SELECT department_id
  ORDER BY 1;
 ```
 
-<a href="/img/greatest-n-per-group_062.png"><img src="/img/greatest-n-per-group_062.png" alt="greatest-n-per-group_062.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_062.png"><img src="/assets/img/greatest-n-per-group_062.png" alt="greatest-n-per-group_062.png" target="_blank"></a>
 
 
 Okej.  ```employees``` zawiera już ```department_id = 60``` z 5 wierszami, który posłuży mi za wygodny przykład.<br/>Stwórzmy najpierw prostego INNER JOINa. 
@@ -121,7 +121,7 @@ SELECT e1.first_name
    AND e1.department_id = 60;
 ```
 
-<a href="/img/greatest-n-per-group_063.png"><img src="/img/greatest-n-per-group_063.png" alt="greatest-n-per-group_063.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_063.png"><img src="/assets/img/greatest-n-per-group_063.png" alt="greatest-n-per-group_063.png" target="_blank"></a>
 
 W ramach danego ```department_id```, łączymy każdy wiersz z każdym wierszem.<br/>Czyli w rezultacie dla ```e1.department_id = 60``` mamy 5\*5 = 25 wierszy.<br/><br/>**\***Możemy to sobie zwizualizować jako 2 koncentryczne, mające tę samą średnicę zbiory na [diagramie Venna](https://en.wikipedia.org/wiki/Venn_diagram).<br/>**\*\***Tak długo, jak ```department_id``` nie ma wartości ```NULL```, to niezależnie od typu ```JOIN``` - wynik query nie będzie się różnił.
 
@@ -150,7 +150,7 @@ WHERE 1=1
    OR e2.department_id IS NULL;
 ```
 
-<a href="/img/greatest-n-per-group_064.png"><img src="/img/greatest-n-per-group_064.png" alt="greatest-n-per-group_064.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_064.png"><img src="/assets/img/greatest-n-per-group_064.png" alt="greatest-n-per-group_064.png" target="_blank"></a>
 
 {: .box-warning}
 Dlaczego porównując (z samą sobą) **1** kolumnę ```department_id```, otrzymuję **2** wiersze, które nie spełniają warunku?
@@ -185,7 +185,7 @@ WHERE 1=1
 ORDER BY e1.salary NULLS FIRST
 {% endhighlight %}
 
-<a href="/img/greatest-n-per-group_066.png"><img src="/img/greatest-n-per-group_066.png" alt="greatest-n-per-group_066.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_066.png"><img src="/assets/img/greatest-n-per-group_066.png" alt="greatest-n-per-group_066.png" target="_blank"></a>
 
 | Wiersz | Opis |
 |:------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -251,7 +251,7 @@ SELECT department_id
  ORDER BY department_id;
 ```
 
-<a href="/img/greatest-n-per-group_053.png"><img src="/img/greatest-n-per-group_053.png" alt="greatest-n-per-group_053.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_053.png"><img src="/assets/img/greatest-n-per-group_053.png" alt="greatest-n-per-group_053.png" target="_blank"></a>
 
 Tutaj tłumaczenia będzie znacznie mniej.<br/>Zakładam, że konstrukt **subquery** lub **CTE** jest znany.<br/>Musimy użyć jednego z nich, bo ([za dokumentacją Oracle](https://docs.oracle.com/cd/E11882_01/server.112/e41084/functions004.htm#SQLRF06174)):
 
@@ -273,7 +273,7 @@ SELECT MAX (salary) OVER() AS max_salary
   FROM employees;
 ```
 
-<a href="/img/greatest-n-per-group_067.png"><img src="/img/greatest-n-per-group_067.png" alt="greatest-n-per-group_067.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_067.png"><img src="/assets/img/greatest-n-per-group_067.png" alt="greatest-n-per-group_067.png" target="_blank"></a>
 
 O ile dla funkcji agregujących **grupy** są definiowane "globalnie" - tzn. dla danego query (klauzula ```WHERE```), to funkcje analityczne tworzą własne, "wewnętrzne" grupowanie.<br/>**Możemy więc wyświetlić zgrupowane rezultaty dla niezgrupowanych danych(!).**<br/><br/>
 ...Najłatwiej na przykładzie.
@@ -293,7 +293,7 @@ SELECT department_id
  ORDER BY department_id;  
 ```
 
-<a href="/img/greatest-n-per-group_068.png"><img src="/img/greatest-n-per-group_068.png" alt="greatest-n-per-group_068.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_068.png"><img src="/assets/img/greatest-n-per-group_068.png" alt="greatest-n-per-group_068.png" target="_blank"></a>
 
 Korzystając z opisanej własności, obok zagregowanych wyników, wyświetlmy wszystkie (niezagregowane) wiersze z tabeli.
 
@@ -304,7 +304,7 @@ SELECT employees.*
  ORDER BY department_id;
 ```
 
-<a href="/img/greatest-n-per-group_069.png"><img src="/img/greatest-n-per-group_069.png" alt="greatest-n-per-group_069.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_069.png"><img src="/assets/img/greatest-n-per-group_069.png" alt="greatest-n-per-group_069.png" target="_blank"></a>
 
 Funkcje analityczne nie mogą zostać użyte w ```GROUP BY```. 
 
@@ -363,7 +363,7 @@ SELECT *
   FROM department_salaries
 ```
 
-<a href="/img/greatest-n-per-group_056.png"><img src="/img/greatest-n-per-group_056.png" alt="greatest-n-per-group_056.png" target="_blank"></a>
+<a href="/assets/img/greatest-n-per-group_056.png"><img src="/assets/img/greatest-n-per-group_056.png" alt="greatest-n-per-group_056.png" target="_blank"></a>
 
 ### 5. (mini) BONUS
 

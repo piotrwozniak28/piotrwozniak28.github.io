@@ -2,7 +2,7 @@
 layout: post
 title: Table functions
 subtitle: SELECT * FROM TABLE (...);
-image: /assets/img/table_functions_050.png
+thumbnail-img: /assets/img/table_functions_050.png
 tags: [DB, SQL, PL/SQL]
 ---
 
@@ -40,7 +40,7 @@ END random_string;
 SELECT random_string(5) FROM dual;
 {% endhighlight %}
 
-<a href="/img/table_functions_055.png"><img src="/img/table_functions_055.png" alt="table_functions_055.png" target="_blank"></a>
+<a href="/assets/img/table_functions_055.png"><img src="/assets/img/table_functions_055.png" alt="table_functions_055.png" target="_blank"></a>
 
 ### 1.2 Funkcja zwraca wartość złożoną
 
@@ -77,7 +77,7 @@ SELECT random_employees_one_col(5)
 /
 {% endhighlight %}
 
-<a href="/img/table_functions_060.png"><img src="/img/table_functions_060.png" alt="table_functions_060.png" target="_blank"></a>
+<a href="/assets/img/table_functions_060.png"><img src="/assets/img/table_functions_060.png" alt="table_functions_060.png" target="_blank"></a>
 
 #### 1.2.2 Funkcja zwraca kolekcję w postaci relacyjnej (tabeli) w pojedynczej kolumnie.
 
@@ -92,7 +92,7 @@ SELECT random_employees_one_col(5)
 /
 ```
 
-<a href="/img/table_functions_060.png"><img src="/img/table_functions_060.png" alt="table_functions_060.png" target="_blank"></a>
+<a href="/assets/img/table_functions_060.png"><img src="/assets/img/table_functions_060.png" alt="table_functions_060.png" target="_blank"></a>
 
 ##### 1.2.2.2 Uruchamiamy jako ```Table Function```
 
@@ -102,7 +102,7 @@ SELECT *
 /
 ```
 
-<a href="/img/table_functions_065.png"><img src="/img/table_functions_065.png" alt="table_functions_065.png" target="_blank"></a>
+<a href="/assets/img/table_functions_065.png"><img src="/assets/img/table_functions_065.png" alt="table_functions_065.png" target="_blank"></a>
 
 Wystarczy tylko umieścić funkcję (razem z parametrem) w klauzuli ```TABLE```, którą odpytujemy tak, jak normalną tabelę - np. ```employees```.
 
@@ -121,7 +121,7 @@ SELECT *
 /
 ```
 
-<a href="/img/table_functions_070.png"><img src="/img/table_functions_070.png" alt="table_functions_070.png" target="_blank"></a>
+<a href="/assets/img/table_functions_070.png"><img src="/assets/img/table_functions_070.png" alt="table_functions_070.png" target="_blank"></a>
 
 #### 1.2.3 Funkcja zwraca kolekcję w postaci relacyjnej (tabeli) w wielu kolumnach.
 
@@ -169,7 +169,7 @@ SELECT radom_employees_multi_cols(50)
 /
 ```
 
-<a href="/img/table_functions_080.png"><img src="/img/table_functions_080.png" alt="table_functions_080.png" target="_blank"></a>
+<a href="/assets/img/table_functions_080.png"><img src="/assets/img/table_functions_080.png" alt="table_functions_080.png" target="_blank"></a>
 
 ##### 1.2.3.2 Uruchamiamy jako ```Table Function```
 
@@ -179,7 +179,7 @@ SELECT *
 /
 ```
 
-<a href="/img/table_functions_075.png"><img src="/img/table_functions_075.png" alt="table_functions_075.png" target="_blank"></a>
+<a href="/assets/img/table_functions_075.png"><img src="/assets/img/table_functions_075.png" alt="table_functions_075.png" target="_blank"></a>
 
 ---
 

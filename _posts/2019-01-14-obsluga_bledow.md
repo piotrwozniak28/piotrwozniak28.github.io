@@ -2,7 +2,7 @@
 layout: post
 title: Obsługa błędów
 subtitle: Każdy jest wyjątkowy...
-image: /assets/img/obsluga_wyjatkow_050.jpg
+thumbnail-img: /assets/img/obsluga_wyjatkow_050.jpg
 tags: [DB, PL/SQL]
 ---
 
@@ -127,7 +127,7 @@ Dlaczego RERAISE wyjątku po zapisaniu wartości w logu?
 
 ### RAISE bez RERAISE
 
-<a href="/img/obsluga_wyjatkow_055.png"><img src="/img/obsluga_wyjatkow_055.png" alt="obsluga_wyjatkow_055.png" target="_blank"></a>
+<a href="/assets/img/obsluga_wyjatkow_055.png"><img src="/assets/img/obsluga_wyjatkow_055.png" alt="obsluga_wyjatkow_055.png" target="_blank"></a>
 
 {: .box-error}
 Commit transakcji autonomicznej (zapis do ERROR_LOG) i commit wpisu do tabeli ERROR_LOG_TEST.
@@ -136,7 +136,7 @@ Commit transakcji autonomicznej (zapis do ERROR_LOG) i commit wpisu do tabeli ER
 
 ### RAISE z RERAISE
 
-<a href="/img/obsluga_wyjatkow_060.png"><img src="/img/obsluga_wyjatkow_060.png" alt="obsluga_wyjatkow_060.png" target="_blank"></a>
+<a href="/assets/img/obsluga_wyjatkow_060.png"><img src="/assets/img/obsluga_wyjatkow_060.png" alt="obsluga_wyjatkow_060.png" target="_blank"></a>
 
 {: .box-success}
 Commit transakcji autonomicznej (zapis do ERROR_LOG) i rollback wpisu do tabeli ERROR_LOG_TEST.<br/><br/>

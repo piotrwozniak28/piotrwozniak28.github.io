@@ -2,7 +2,7 @@
 layout: post
 title: UNION vs UNION ALL
 subtitle: Operatory zbiorowe
-image: /assets/img/set_operators_050.png
+thumbnail-img: /assets/img/set_operators_050.png
 tags: [DB, SQL]
 ---
 
@@ -10,7 +10,7 @@ tags: [DB, SQL]
 
 Operatory zbiorowe (```Set Operations```) są dobrze ilustrowane przez diagramy Venna (w przeciwieństwie do ```JOINów```)<br/>Wspomniałem już o tym [w tym poście](https://piotrwozniak.net/2019-02-10-greatest_n_per_group/)
 
-<a href="/img/set_operators_055.png"><img src="/img/set_operators_055.png" alt="set_operators_055.png" target="_blank"></a>
+<a href="/assets/img/set_operators_055.png"><img src="/assets/img/set_operators_055.png" alt="set_operators_055.png" target="_blank"></a>
 
 ## Zasady odnośnie pisania ```Set Operations```:
 
@@ -30,7 +30,7 @@ SELECT col_2
 {% endhighlight %}
 
 
-<a href="/img/set_operators_060.png"><img src="/img/set_operators_060.png" alt="set_operators_060.png" target="_blank"></a>
+<a href="/assets/img/set_operators_060.png"><img src="/assets/img/set_operators_060.png" alt="set_operators_060.png" target="_blank"></a>
 
 
 #### TYP DANYCH vs GRUPA TYPÓW DANYCH
@@ -80,7 +80,7 @@ SELECT *
 /
 {% endhighlight %}
 
-<a href="/img/set_operators_065.png"><img src="/img/set_operators_065.png" alt="set_operators_065.png" target="_blank"></a>
+<a href="/assets/img/set_operators_065.png"><img src="/assets/img/set_operators_065.png" alt="set_operators_065.png" target="_blank"></a>
 
 ...A teraz dla ```UNION```
 
@@ -97,7 +97,7 @@ SELECT *
 /
 {% endhighlight %}
 
-<a href="/img/set_operators_070.png"><img src="/img/set_operators_070.png" alt="set_operators_070.png" target="_blank"></a>
+<a href="/assets/img/set_operators_070.png"><img src="/assets/img/set_operators_070.png" alt="set_operators_070.png" target="_blank"></a>
 
 Aby usunąć duplikaty, wyniki zostały posortowane.<br/>
 Wynik takiego query będzie identyczny jak ```SELECT DISTINCT...```
@@ -118,7 +118,7 @@ SELECT *
 
 ...Jednak w drugim przykładzie została użyta bardziej wydajna (zaimplementowana w DBMS 10.2.0) wersja algorytmu sortującego - ```HASH UNIQUE```.
 
-<a href="/img/set_operators_075.png"><img src="/img/set_operators_075.png" alt="set_operators_075.png" target="_blank"></a>
+<a href="/assets/img/set_operators_075.png"><img src="/assets/img/set_operators_075.png" alt="set_operators_075.png" target="_blank"></a>
 
 Możemy zabronić użycia tego algorytmu. Wtedy plan wykonania będzie identyczny jak w przypadku ```UNION```
 
@@ -183,7 +183,7 @@ SELECT *
 
 O ile ```UNION ALL``` nie sprawia problemu, to ```UNION``` już nie przejdzie.
 
-<a href="/img/set_operators_080.png"><img src="/img/set_operators_080.png" alt="set_operators_080.png" target="_blank"></a>
+<a href="/assets/img/set_operators_080.png"><img src="/assets/img/set_operators_080.png" alt="set_operators_080.png" target="_blank"></a>
 
 Moglibyśmy porównać zawartość tych kolumn np. za pomocą funkcji ```TO_CHAR```, która zawsze zwraca ```VARCHAR2```.
 

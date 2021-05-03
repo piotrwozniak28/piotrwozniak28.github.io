@@ -2,7 +2,7 @@
 layout: post
 title: Pipelined Table Functions
 subtitle: PIPE ROW!
-image: /assets/img/pipelined_table_functions_050.png
+thumbnail-img: /assets/img/pipelined_table_functions_050.png
 tags: [DB, SQL, PL/SQL]
 ---
 
@@ -68,7 +68,7 @@ SELECT *
   FROM factorial(100); 
 ```
 
-<a href="/img/pipelined_table_functions_060.png"><img src="/img/pipelined_table_functions_060.png" alt="pipelined_table_functions_060.png" target="_blank"></a>
+<a href="/assets/img/pipelined_table_functions_060.png"><img src="/assets/img/pipelined_table_functions_060.png" alt="pipelined_table_functions_060.png" target="_blank"></a>
 
 Wynik dla 84! ma 125 cyfr. Wynik dla 85! przekracza maksymalną wartość ```precision``` (126). 
 Zamiast kolejnych wartości, otrzymujemy Inf[i](https://www.youtube.com/watch?v=jzy2dgEUOhY)nity.

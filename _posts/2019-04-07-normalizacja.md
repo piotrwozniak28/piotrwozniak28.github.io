@@ -2,7 +2,7 @@
 layout: post
 title: Normalizacja
 subtitle: 1NF czy nie 1NF
-image: /assets/img/normalizacja_avatar.jpg
+thumbnail-img: /assets/img/normalizacja_avatar.jpg
 tags: [DB]
 ---
 
@@ -48,7 +48,7 @@ A relational database is
 a collection of relations of assorted degrees.<br/>
 All of the query and manipulative operators are upon relations, and all of them generate relations as results.
 
-<a href="https://www.amazon.com/Relational-Model-Database-Management-Version/dp/0201141922"><img src="/img/normalizacja_060.png" alt="normalizacja_060.png" target="_blank"></a>
+<a href="https://www.amazon.com/Relational-Model-Database-Management-Version/dp/0201141922"><img src="/assets/img/normalizacja_060.png" alt="normalizacja_060.png" target="_blank"></a>
 
 {: .box-note}
 **Mini-słowniczek**, co dany termin w praktyce oznacza:<br/><br/>
@@ -76,7 +76,7 @@ Użyte przez Codda kryterium "atomowości" wartości, zrodziło wiele interpreta
 
 Weźmy fragment z polskiej Wikipedii
 
-<a href="/img/normalizacja_065.png"><img src="/img/normalizacja_065.png" alt="normalizacja_065.png" target="_blank"></a>
+<a href="/assets/img/normalizacja_065.png"><img src="/assets/img/normalizacja_065.png" alt="normalizacja_065.png" target="_blank"></a>
 
 Wspomniana elementarność (atomowość, niepodzielność) wartości, rozumiana bezwzględnie, występuje dla komputera przecież dopiero na poziomie bitu (0 lub 1).
 

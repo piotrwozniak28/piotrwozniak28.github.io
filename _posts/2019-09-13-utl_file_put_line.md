@@ -2,7 +2,7 @@
 layout: post
 title: UTL_FILE.PUT_LINE
 subtitle: Zapisz, bo zapomnisz
-image: /assets/img/utl_file_avatar.png
+thumbnail-img: /assets/img/utl_file_avatar.png
 tags: [DB, PL/SQL]
 ---
 
@@ -158,7 +158,7 @@ Ostatecznie, aby mieć pewność że procedura się wykona, nasz bufor musi mie�
 
 ### Za mały
 
-<a href="/img/utl_file_write_050.png"><img src="/img/utl_file_write_050.png" alt="utl_file_write_050.png" target="_blank"></a>
+<a href="/assets/img/utl_file_write_050.png"><img src="/assets/img/utl_file_write_050.png" alt="utl_file_write_050.png" target="_blank"></a>
 
 {: .box-error}
 Przekazuję do bufora 2 wartości z tabeli ```blurred_lines``` (1000000, 999999) wraz z ```l_line_separator := chr(10)``` po każdej z nich.<br/>Razem potrzebuję 1\*(6+1) + 1\*(7+1) = **15** bajtów, podczas gdy ```l_buffer_size``` jest zdeklarowany na max **14** bajtów.<br/>
@@ -166,7 +166,7 @@ Baza zwraca błąd.
 
 ### Idealny
 
-<a href="/img/utl_file_write_055.png"><img src="/img/utl_file_write_055.png" alt="utl_file_write_055.png" target="_blank"></a>
+<a href="/assets/img/utl_file_write_055.png"><img src="/assets/img/utl_file_write_055.png" alt="utl_file_write_055.png" target="_blank"></a>
 
 {: .box-success}
 Tym razem zdeklarowałem bufor idealnie na taką wartość (**15B**), jaka zostanie wprowadzona. Transakcja wykonana, plik poprawnie zapisany.
@@ -176,10 +176,10 @@ Tym razem zdeklarowałem bufor idealnie na taką wartość (**15B**), jaka zosta
 Bez owijania w bawełnę:
 
 {: .box-error}
-**Bez bufora**<br/><br/><a href="/img/utl_file_write_060.png"><img src="/img/utl_file_write_060.png" alt="utl_file_write_060.png" target="_blank">
+**Bez bufora**<br/><br/><a href="/assets/img/utl_file_write_060.png"><img src="/assets/img/utl_file_write_060.png" alt="utl_file_write_060.png" target="_blank">
 
 {: .box-success}
-**Z buforem**<br/><br/><a href="/img/utl_file_write_065.png"><img src="/img/utl_file_write_065.png" alt="utl_file_write_065.png" target="_blank">
+**Z buforem**<br/><br/><a href="/assets/img/utl_file_write_065.png"><img src="/assets/img/utl_file_write_065.png" alt="utl_file_write_065.png" target="_blank">
 
 Zaoszczędziliśmy **8 sekund!!!**  
 Co w tym czasie można zrobić, pozostawiam wyobraźni developerów.
