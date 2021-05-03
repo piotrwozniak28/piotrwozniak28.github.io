@@ -14,7 +14,7 @@ Jestem zwolennikiem diligent practice pod dyktatem pomodoro i spersonalizowanego
 
 #### Psychologia
 - Obszar psyche jest dla mnie wybitnie interesujący. Jego rozlegość mogłaby choćby obrazować chocby skrajnie deterministyczne stanowisko prof. Roberta Sapolskiego (polecam jego [serię wykładów o etologii ze Stanford](https://www.youtube.com/watch?v=NNnIGh9g6fA)) przyrównane do poglądów prof. Krzysztofa Meissnera (tu szczególnie rekomenduję wykład [Fizyka a wiara](https://www.youtube.com/watch?v=291sutj35Mo)).
-- Wraz z 2 znajomymi tworzyłem kanał na YouTube o psychologii opartej na dowodach (zdaję sobie sprawę z [kryzysu replikacji badań naukowych](https://en.wikipedia.org/wiki/Replication_crisis), jak i bardziej radykalnych stanowisk - jak choćby prof. Wolniewicza, który uważał, że nauki są 4: matematyka, fizyka, biologia, chemia (uwzględniając ich odgałęzienia), ale jak to w życiu bywa - robimy, co możemy, z tym, co mamy:)).
+- Wraz z 2 znajomymi tworzyłem kanał na YouTube o psychologii opartej na dowodach (zdaję sobie sprawę z [kryzysu replikacji badań naukowych](https://en.wikipedia.org/wiki/Replication_crisis), jak i bardziej radykalnych stanowisk - jak choćby prof. Wolniewicza, który uważał, że nauki są 4: matematyka, fizyka, biologia, chemia (uwzględniając ich odgałęzienia), ale jak zwykle to w życiu bywa - robimy, co możemy, z tym, co mamy:)).
 - Przez rok byłem przewodniczącym koła naukowego na Uniwersytecie SWPS w Poznaniu i współorganizowałem konferencję "Tygiel Nastrojów" o leczeniu depresji.
 
 #### Boks
