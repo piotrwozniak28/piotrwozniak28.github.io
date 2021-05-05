@@ -15,8 +15,8 @@ author: Piotr Woźniak
 
 navbar-links:
   APEX: "https://apex.oracle.com/pls/apex/f?p=280000"
-  O mnie: "aboutme"
   Tagi: "tags"
+  O mnie: "aboutme"
 
 # --- Logo --- #
 
