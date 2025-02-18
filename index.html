@@ -4,14 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Support Medical Treatment - 1.5% PIT Donation</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <title>Medical PIT Donation - 1.5% Allocation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Roboto', sans-serif;
+            font-family: 'Inter', sans-serif;
         }
 
         body {
@@ -19,7 +19,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background: #f0f2f5;
+            background: #f8fafc;
             padding: 20px;
         }
 
@@ -27,78 +27,81 @@
             background: white;
             padding: 40px;
             border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             max-width: 600px;
             width: 100%;
         }
 
         h1 {
-            color: #2c3e50;
+            color: #1e293b;
             margin-bottom: 30px;
             font-weight: 500;
             text-align: center;
             font-size: 1.8rem;
         }
 
-        .form-group {
+        .info-group {
             margin-bottom: 25px;
+            background: #f1f5f9;
+            padding: 16px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #34495e;
-            font-weight: 500;
-        }
-
-        input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #bdc3c7;
-            border-radius: 6px;
+        .info-text {
+            color: #334155;
             font-size: 16px;
-            transition: border-color 0.3s ease;
+            word-break: break-word;
+            padding-right: 15px;
         }
 
-        input:focus {
-            outline: none;
-            border-color: #3498db;
-            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
-        }
-
-        button {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, #3498db, #2980b9);
+        .copy-btn {
+            background: #3b82f6;
             color: white;
             border: none;
             border-radius: 6px;
-            font-size: 16px;
-            font-weight: 500;
+            padding: 8px 16px;
+            font-size: 14px;
             cursor: pointer;
-            transition: opacity 0.3s ease;
+            transition: background 0.2s ease;
+            flex-shrink: 0;
         }
 
-        button:hover {
-            opacity: 0.9;
+        .copy-btn:hover {
+            background: #2563eb;
+        }
+
+        .copy-btn.copied {
+            background: #10b981;
         }
 
         .disclaimer {
-            margin-top: 25px;
-            color: #7f8c8d;
+            margin-top: 30px;
+            color: #64748b;
             font-size: 0.9rem;
-            line-height: 1.5;
+            line-height: 1.6;
             text-align: center;
         }
 
         @media (max-width: 480px) {
             .container {
                 padding: 25px;
-                margin: 10px;
             }
 
             h1 {
                 font-size: 1.5rem;
+            }
+
+            .info-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .copy-btn {
+                margin-top: 12px;
+                width: 100%;
             }
         }
     </style>
@@ -106,28 +109,49 @@
 
 <body>
     <div class="container">
-        <h1>Support Medical Treatment - 1.5% PIT Donation</h1>
+        <h1>1.5% PIT Allocation for Medical Treatment</h1>
 
-        <form>
-            <div class="form-group">
-                <label for="name">Full Name</label>
-                <input type="text" id="name" name="name" required placeholder="John Doe">
+        <div class="info-group">
+            <div class="info-text">
+                <strong>Beneficiary Name:</strong><br>
+                [INSERT PATIENT NAME HERE]
             </div>
+            <button class="copy-btn" onclick="copyText('name')">Copy Name</button>
+        </div>
 
-            <div class="form-group">
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required placeholder="123-456-789">
+        <div class="info-group">
+            <div class="info-text">
+                <strong>Identification Number:</strong><br>
+                [INSERT ID NUMBER HERE]
             </div>
-
-            <button type="submit">Submit Donation Request</button>
-        </form>
+            <button class="copy-btn" onclick="copyText('number')">Copy Number</button>
+        </div>
 
         <p class="disclaimer">
-            By submitting this form, you agree to allocate 1.5% of your Personal Income Tax (PIT)
-            to support the medical treatment of a close family member. All donations are tax-deductible
-            and processed through official government channels.
+            This information is required for allocating 1.5% of your Personal Income Tax
+            to support medical treatment costs. Verify all details before submission.
         </p>
     </div>
+
+    <script>
+        function copyText(type) {
+            const btn = event.target;
+            const text = type === 'name'
+                ? "[INSERT PATIENT NAME HERE]"
+                : "[INSERT ID NUMBER HERE]";
+
+            navigator.clipboard.writeText(text).then(() => {
+                btn.classList.add('copied');
+                btn.textContent = 'Copied!';
+                setTimeout(() => {
+                    btn.classList.remove('copied');
+                    btn.textContent = type === 'name'
+                        ? 'Copy Name'
+                        : 'Copy Number';
+                }, 1500);
+            });
+        }
+    </script>
 </body>
 
 </html>
