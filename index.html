@@ -86,7 +86,7 @@
         .info-group {
             margin-bottom: 1.5625rem;
             background: #f1f5f9;
-            padding: 1rem;
+            padding: 0rem;
             border-radius: 0.5rem;
             display: flex;
             justify-content: space-between;
@@ -227,9 +227,9 @@
                 padding: 1.5625rem;
             }
 
-            h1 {
+            /* h1 {
                 font-size: 1.5rem;
-            }
+            } */
 
             .info-group {
                 flex-direction: column;
@@ -249,11 +249,11 @@
     <div class="container">
         <h1>Przekaż 1,5% podatku</h1>
         <div class="info-group">
-            <div class="info-text"> <strong>Numer KRS</strong><br> 0000270809 </div> <button class="copy-btn"
+            <div class="info-text"> <strong>Numer KRS:</strong><br> 0000270809 </div> <button class="copy-btn"
                 data-type="numerKrs">Kopiuj numer KRS</button>
         </div>
         <div class="info-group">
-            <div class="info-text"> <strong>Cel szczegółowy 1,5%</strong><br> Lembicz, 18801 </div> <button
+            <div class="info-text"> <strong>Cel szczegółowy 1,5%:</strong><br> Lembicz, 18801 </div> <button
                 class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy</button>
         </div>
     </div>
@@ -288,6 +288,9 @@
         <p class="disclaimer">Uprawnienia Avalon można sprawdzić na stronie rządowej: <br><a
                 href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
                 https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a>
+        <p class="disclaimer">Przykład wypełnienia deklaracji PIT:<br><a
+                href="https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku/" target="_blank">
+                https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku/ </a>
         </p>
     </div>
     <script> document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', function () { const type = btn.getAttribute('data-type'); const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801"; const originalText = btn.textContent; navigator.clipboard.writeText(text).then(() => { btn.classList.add('copied'); btn.textContent = 'Skopiowano do schowka'; setTimeout(() => { btn.classList.remove('copied'); btn.textContent = originalText; }, 1500); }); }); }); </script>
