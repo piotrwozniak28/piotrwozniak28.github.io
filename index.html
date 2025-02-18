@@ -136,6 +136,13 @@
             padding: 0 var(--padding-medium);
         }
 
+        .disclaimer-container2 {
+            max-width: var(--max-disclaimer-width);
+            width: 100%;
+            margin: 0rem auto 0;
+            padding: 0 var(--padding-medium);
+        }
+
         .disclaimer {
             color: var(--accent-color);
             font-size: 0.9rem;
@@ -266,12 +273,18 @@
                     target="_blank" rel="noopener"> https://ptsr.org.pl/strona/160,co-to-jest-nmosd </a> </cite>
         </blockquote>
     </figure>
+
+    <div class="disclaimer-container2">
+        <p class="disclaimer">Proszę Cię o wsparcie.
+            </br>Choroba wymaga przyjmowania silnych leków i stałej opieki lekarzy i fizjoterapeutów. Twoje 1,5% podatku
+            trafi do fundacji Avalon, która zajmuje się pomocą osobom
+            niepełnosprawnym.
+        </p>
+    </div>
     <div class="disclaimer-container">
-        <p class="disclaimer">Choroba wymaga przyjmowania silnych leków i stałej opieki lekarzy i fizjoterapeutów.
-            </br>Proszę Cię o wsparcie. Twoje 1,5% podatku trafi do fundacji Avalon, która zajmuje się pomocą osobom
-            niepełnosprawnym.<br><br>Uprawnienia Avalon można sprawdzić na stronie rządowej: <a
+        <p class="disclaimer">Uprawnienia Avalon można sprawdzić na stronie rządowej: <a
                 href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
-                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a> <br>
+                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a>
         </p>
     </div>
     <script> document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', function () { const type = btn.getAttribute('data-type'); const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801"; const originalText = btn.textContent; navigator.clipboard.writeText(text).then(() => { btn.classList.add('copied'); btn.textContent = 'Skopiowano do schowka'; setTimeout(() => { btn.classList.remove('copied'); btn.textContent = originalText; }, 1500); }); }); }); </script>
