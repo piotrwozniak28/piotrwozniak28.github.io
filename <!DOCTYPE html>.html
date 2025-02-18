@@ -22,8 +22,6 @@
             --border-radius: 0.75rem;
             --max-container-width: 600px;
             --max-disclaimer-width: 800px;
-            --citation-font-size: 0.9rem;
-            --accent-color: #64748b;
         }
 
         * {
@@ -115,12 +113,13 @@
         }
 
         .disclaimer {
-            color: var(--accent-color);
+            color: #64748b;
             font-size: 0.9rem;
             line-height: 1.6;
             text-align: left;
         }
 
+        /* Sample Quote Block Styling */
         .quote-block {
             position: relative;
             max-width: var(--max-disclaimer-width);
@@ -139,7 +138,7 @@
 
         .quote-block p {
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.;
         }
 
         .quote-block::before {
@@ -173,20 +172,10 @@
         }
 
         .quote-citation {
-            display: block;
             margin-top: 0.5rem;
-            text-align: left;
+            text-align: right;
             font-size: var(--citation-font-size);
             color: var(--accent-color);
-            line-height: 1.4;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .quote-citation {
-                font-size: calc(var(--citation-font-size) * 0.9);
-                text-align: center;
-            }
         }
 
         @media (max-width: 530px) {
@@ -208,6 +197,8 @@
                 width: 100%;
                 height: var(--copy-btn-height);
             }
+
+
         }
     </style>
 </head>
@@ -216,33 +207,65 @@
     <div class="container">
         <h1>Przekaż 1,5% podatku</h1>
         <div class="info-group">
-            <div class="info-text"> <strong>Numer KRS</strong><br> 0000270809 </div> <button class="copy-btn"
-                data-type="numerKrs">Kopiuj numer KRS</button>
+            <div class="info-text">
+                <strong>Numer KRS</strong><br>
+                0000270809
+            </div>
+            <button class="copy-btn" data-type="numerKrs">Kopiuj numer KRS</button>
         </div>
         <div class="info-group">
-            <div class="info-text"> <strong>Cel szczegółowy 1,5%</strong><br> Lembicz, 18801 </div> <button
-                class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy</button>
+            <div class="info-text">
+                <strong>Cel szczegółowy 1,5%</strong><br>
+                Lembicz, 18801
+            </div>
+            <button class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy</button>
         </div>
     </div>
+
     <div class="disclaimer-container">
-        <p class="disclaimer"> 1,5% trafi do fundacji Avalon, która zajmuje się pomocą osobom niepełnosprawnym.
-            <br>Uprawnienia Avalon można sprawdzić na stronie rządowej: <a
-                href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
-                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a> <br>
+        <p class="disclaimer">
+            1,5% trafi do fundacji Avalon, która zajmuje się pomocą osobom niepełnosprawnym.
+            <br>Uprawnienia Avalon można sprawdzić na stronie rządowej:
+            <a href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
+                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809
+            </a>
+            <br>
         </p>
     </div>
+
     <figure class="quote-block">
         <blockquote>
             <p>"Naturalny przebieg NMOSD jest zazwyczaj ciężki, dramatyczny. Procesy zapalne w ośrodkowym układzie
                 nerwowym prowadzą do ciężkich rzutów, które powodują postępujące pogorszenie się stanu neurologicznego i
                 nieodwracalną niepełnosprawność. Remisje (czyli czas po rzucie) nie są całkowite. Średnio 1 na 3 osoby
                 już po pierwszym rzucie choroby wymaga wózka inwalidzkiego. NMOSD charakteryzuje niestety duża
-                śmiertelność - w ciągu pierwszych 15 lat umiera nawet 23% procent chorych."</p> <cite
-                class="quote-citation"> Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd"
-                    target="_blank" rel="noopener"> https://ptsr.org.pl/strona/160,co-to-jest-nmosd </a> </cite>
+                śmiertelność - w ciągu pierwszych 15 lat umiera nawet 23% procent chorych."</p>
+            <cite class="quote-citation">
+                Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd" target="_blank"
+                    rel="noopener">https://ptsr.org.pl/strona/160,co-to-jest-nmosd</a>
+            </cite>
         </blockquote>
     </figure>
-    <script> document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', function () { const type = btn.getAttribute('data-type'); const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801"; const originalText = btn.textContent; navigator.clipboard.writeText(text).then(() => { btn.classList.add('copied'); btn.textContent = 'Skopiowano do schowka'; setTimeout(() => { btn.classList.remove('copied'); btn.textContent = originalText; }, 1500); }); }); }); </script>
+
+    <!-- Sample Quote Block with Source URL -->
+
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const type = btn.getAttribute('data-type');
+                const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801";
+                const originalText = btn.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    btn.classList.add('copied');
+                    btn.textContent = 'Skopiowano do schowka';
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                        btn.textContent = originalText;
+                    }, 1500);
+                });
+            });
+        });
+    </script>
 </body>
 
 </html>
