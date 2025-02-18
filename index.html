@@ -82,7 +82,7 @@
             color: #64748b;
             font-size: 0.9rem;
             line-height: 1.6;
-            text-align: center;
+            text-align: left;
         }
 
         @media (max-width: 480px) {
@@ -116,7 +116,7 @@
                 <strong>Numer KRS</strong><br>
                 0000270809
             </div>
-            <button class="copy-btn" onclick="copyText('name')">Kopiuj numer KRS</button>
+            <button class="copy-btn" onclick="copyText('numerKrs')">Kopiuj numer KRS</button>
         </div>
 
         <div class="info-group">
@@ -124,12 +124,10 @@
                 <strong>Cel szczegółowy 1,5%</strong><br>
                 Lembicz, 18801
             </div>
-            <button class="copy-btn" onclick="copyText('number')">Kopiuj cel szczegółowy</button>
+            <button class="copy-btn" onclick="copyText('celSzczegolowy')">Kopiuj cel szczegółowy</button>
         </div>
 
         <p class="disclaimer">
-            https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku/
-
             1,5% trafi do fundacji Avalon, która zajmuje się pomocą osobom niepełnosprawnym.
             Uprawnienia Avalon można sprawdzić na stronie rządowej:
             https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809
@@ -139,7 +137,7 @@
     <script>
         function copyText(type) {
             const btn = event.target;
-            const text = type === 'name'
+            const text = type === 'numerKrs'
                 ? "0000270809"
                 : "Lembicz, 18801";
 
@@ -148,9 +146,9 @@
                 btn.textContent = 'Copied!';
                 setTimeout(() => {
                     btn.classList.remove('copied');
-                    btn.textContent = type === 'name'
-                        ? 'Copy Name'
-                        : 'Copy Number';
+                    btn.textContent = type === 'numerKrs'
+                        ? 'Kopiuj numer KRS'
+                        : 'Kopiuj cel szczegółowy';
                 }, 1500);
             });
         }
