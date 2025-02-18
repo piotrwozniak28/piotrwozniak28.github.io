@@ -113,16 +113,16 @@
 
         <div class="info-group">
             <div class="info-text">
-                <strong>Beneficiary Name:</strong><br>
-                [INSERT PATIENT NAME HERE]
+                <strong>Numer KRS</strong><br>
+                0000270809
             </div>
             <button class="copy-btn" onclick="copyText('name')">Copy Name</button>
         </div>
 
         <div class="info-group">
             <div class="info-text">
-                <strong>Identification Number:</strong><br>
-                [INSERT ID NUMBER HERE]
+                <strong>Cel szczegółowy 1,5%</strong><br>
+                Lembicz, 18801
             </div>
             <button class="copy-btn" onclick="copyText('number')">Copy Number</button>
         </div>
@@ -137,8 +137,8 @@
         function copyText(type) {
             const btn = event.target;
             const text = type === 'name'
-                ? "[INSERT PATIENT NAME HERE]"
-                : "[INSERT ID NUMBER HERE]";
+                ? "0000270809"
+                : "Lembicz, 18801";
 
             navigator.clipboard.writeText(text).then(() => {
                 btn.classList.add('copied');
