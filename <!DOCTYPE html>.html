@@ -1,3 +1,14 @@
+this is code of my webapp to donate 1,5% of PIT for a sick relative of mine
+
+please improve styling of the <cite class="quote-citation"></cite>
+right now, it doesnt react to changes in my css code
+
+use best frontent practices, try not to hardcode things
+make sure that this will look great both on wide screens and on small mobile devices
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,20 +19,24 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #3b82f6;
+            --primary-color: #218aff;
+            --primary-color: #4d7e55;
             --primary-color-hover: #2563eb;
+            --primary-color-hover: #34673c;
             --success-color: #10b981;
             --bg-color: #f8fafc;
             --container-bg: #ffffff;
             --text-color: #334155;
             --heading-color: #1e293b;
-            --copy-btn-width: 10.5rem;
+            --copy-btn-width: 11.5rem;
             --copy-btn-height: 2.5rem;
             --padding-large: 2.5rem;
             --padding-medium: 1.25rem;
             --border-radius: 0.75rem;
             --max-container-width: 600px;
             --max-disclaimer-width: 800px;
+            --citation-font-size: 0.9rem;
+            --accent-color: #64748b;
         }
 
         * {
@@ -113,13 +128,12 @@
         }
 
         .disclaimer {
-            color: #64748b;
+            color: var(--accent-color);
             font-size: 0.9rem;
             line-height: 1.6;
             text-align: left;
         }
 
-        /* Sample Quote Block Styling */
         .quote-block {
             position: relative;
             max-width: var(--max-disclaimer-width);
@@ -138,7 +152,7 @@
 
         .quote-block p {
             margin: 0;
-            line-height: 1.;
+            line-height: 1.4;
         }
 
         .quote-block::before {
@@ -172,10 +186,20 @@
         }
 
         .quote-citation {
+            display: block;
             margin-top: 0.5rem;
-            text-align: right;
+            text-align: left;
             font-size: var(--citation-font-size);
             color: var(--accent-color);
+            line-height: 1.4;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .quote-citation {
+                font-size: calc(var(--citation-font-size) * 0.9);
+                text-align: center;
+            }
         }
 
         @media (max-width: 530px) {
@@ -197,8 +221,6 @@
                 width: 100%;
                 height: var(--copy-btn-height);
             }
-
-
         }
     </style>
 </head>
@@ -207,65 +229,33 @@
     <div class="container">
         <h1>Przekaż 1,5% podatku</h1>
         <div class="info-group">
-            <div class="info-text">
-                <strong>Numer KRS</strong><br>
-                0000270809
-            </div>
-            <button class="copy-btn" data-type="numerKrs">Kopiuj numer KRS</button>
+            <div class="info-text"> <strong>Numer KRS</strong><br> 0000270809 </div> <button class="copy-btn"
+                data-type="numerKrs">Kopiuj numer KRS</button>
         </div>
         <div class="info-group">
-            <div class="info-text">
-                <strong>Cel szczegółowy 1,5%</strong><br>
-                Lembicz, 18801
-            </div>
-            <button class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy</button>
+            <div class="info-text"> <strong>Cel szczegółowy 1,5%</strong><br> Lembicz, 18801 </div> <button
+                class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy</button>
         </div>
     </div>
-
     <div class="disclaimer-container">
-        <p class="disclaimer">
-            1,5% trafi do fundacji Avalon, która zajmuje się pomocą osobom niepełnosprawnym.
-            <br>Uprawnienia Avalon można sprawdzić na stronie rządowej:
-            <a href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
-                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809
-            </a>
-            <br>
+        <p class="disclaimer"> 1,5% trafi do fundacji Avalon, która zajmuje się pomocą osobom niepełnosprawnym.
+            <br>Uprawnienia Avalon można sprawdzić na stronie rządowej: <a
+                href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
+                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a> <br>
         </p>
     </div>
-
     <figure class="quote-block">
         <blockquote>
             <p>"Naturalny przebieg NMOSD jest zazwyczaj ciężki, dramatyczny. Procesy zapalne w ośrodkowym układzie
                 nerwowym prowadzą do ciężkich rzutów, które powodują postępujące pogorszenie się stanu neurologicznego i
                 nieodwracalną niepełnosprawność. Remisje (czyli czas po rzucie) nie są całkowite. Średnio 1 na 3 osoby
                 już po pierwszym rzucie choroby wymaga wózka inwalidzkiego. NMOSD charakteryzuje niestety duża
-                śmiertelność - w ciągu pierwszych 15 lat umiera nawet 23% procent chorych."</p>
-            <cite class="quote-citation">
-                Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd" target="_blank"
-                    rel="noopener">https://ptsr.org.pl/strona/160,co-to-jest-nmosd</a>
-            </cite>
+                śmiertelność - w ciągu pierwszych 15 lat umiera nawet 23% procent chorych."</p> <cite
+                class="quote-citation"> Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd"
+                    target="_blank" rel="noopener"> https://ptsr.org.pl/strona/160,co-to-jest-nmosd </a> </cite>
         </blockquote>
     </figure>
-
-    <!-- Sample Quote Block with Source URL -->
-
-    <script>
-        document.querySelectorAll('.copy-btn').forEach(btn => {
-            btn.addEventListener('click', function () {
-                const type = btn.getAttribute('data-type');
-                const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801";
-                const originalText = btn.textContent;
-                navigator.clipboard.writeText(text).then(() => {
-                    btn.classList.add('copied');
-                    btn.textContent = 'Skopiowano do schowka';
-                    setTimeout(() => {
-                        btn.classList.remove('copied');
-                        btn.textContent = originalText;
-                    }, 1500);
-                });
-            });
-        });
-    </script>
+    <script> document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', function () { const type = btn.getAttribute('data-type'); const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801"; const originalText = btn.textContent; navigator.clipboard.writeText(text).then(() => { btn.classList.add('copied'); btn.textContent = 'Skopiowano do schowka'; setTimeout(() => { btn.classList.remove('copied'); btn.textContent = originalText; }, 1500); }); }); }); </script>
 </body>
 
 </html>
