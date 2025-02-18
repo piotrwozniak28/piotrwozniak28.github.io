@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1,5% dla Karoliny</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link type="image/png" sizes="32x32" rel="icon" href="./icons8-heart-health-32.png">
+    <style>
+        :root {
+            --primary-color: #218aff;
+            --primary-color: #4d7e55;
+            --primary-color-hover: #2563eb;
+            --primary-color-hover: #34673c;
+            --success-color: #055037;
+            --bg-color: #ffffff;
+            --container-bg: #ffffff;
+            --text-color: #334155;
+            --heading-color: #1e293b;
+            --copy-btn-width: 13rem;
+            --copy-btn-height: 2.5rem;
+            --padding-large: 2.5rem;
+            --padding-medium: 1.25rem;
+            --border-radius: 0.75rem;
+            --max-container-width: 600px;
+            --max-disclaimer-width: 800px;
+            --citation-font-size: 0.9rem;
+            --accent-color: #000000;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: var(--bg-color);
+            padding: var(--padding-medium);
+            padding-top: 1rem;
+        }
+
+        a:link {
+            color: #4d7e55;
+        }
+
+        a:visited {
+            color: #3d6445;
+            /* 20% darker than #4d7e55 */
+        }
+
+        a:hover {
+            color: #5a9263;
+            /* 10% lighter for hover effect */
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: #2d4a32;
+            /* Even darker for active state */
+        }
+
+        .container {
+            background: var(--container-bg);
+            padding: var(--padding-large);
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            max-width: var(--max-container-width);
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        h1 {
+            color: var(--heading-color);
+            margin-bottom: 1.875rem;
+            font-weight: 500;
+            text-align: center;
+            font-size: 1.8rem;
+        }
+
+        .info-group {
+            margin-bottom: 1.5625rem;
+            background: #ffffff;
+            padding: 0rem;
+            border-radius: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .info-text {
+            color: var(--text-color);
+            font-size: 1rem;
+            word-break: break-word;
+            padding-right: 0.9375rem;
+            flex: 1;
+        }
+
+        .copy-btn {
+            background: var(--primary-color);
+            color: #ffffff;
+            border: none;
+            border-radius: 0.375rem;
+            padding: 0 1rem;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            flex-shrink: 0;
+            width: var(--copy-btn-width);
+            height: var(--copy-btn-height);
+            text-align: center;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+        }
+
+        .copy-btn:hover {
+            background: var(--primary-color-hover);
+        }
+
+        .copy-btn.copied {
+            background: var(--success-color);
+        }
+
+        .disclaimer-container {
+            max-width: var(--max-disclaimer-width);
+            width: 100%;
+            margin: 2rem auto 0;
+            padding: 0 var(--padding-medium);
+        }
+
+        .disclaimer-container2 {
+            max-width: var(--max-disclaimer-width);
+            width: 100%;
+            margin: 0rem auto 0;
+            padding: 0 var(--padding-medium);
+        }
+
+        .disclaimer {
+            color: var(--accent-color);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            text-align: left;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        .quote-block {
+            position: relative;
+            max-width: var(--max-disclaimer-width);
+            margin: 2rem auto;
+            padding: 2.5rem 1rem 1rem 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            background-color: #ffffff;
+            color: var(--text-color);
+            font-style: italic;
+            text-align: justify;
+            text-justify: inter-word;
+            font-size: 0.9rem;
+        }
+
+        .quote-block blockquote {
+            margin: 0;
+            padding: 0;
+        }
+
+        .quote-block p {
+            margin: 0;
+            line-height: 1.4;
+        }
+
+        .quote-block::before {
+            content: "“";
+            position: absolute;
+            top: 0px;
+            left: 10px;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .quote-block::after {
+            content: "”";
+            position: absolute;
+            bottom: 0px;
+            right: 10px;
+            font-size: 3rem;
+            color: var(--primary-color);
+        }
+
+        .quote-block figcaption {
+            text-align: right;
+            margin-top: 0.5rem;
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        .quote-block a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .quote-citation {
+            display: block;
+            margin-top: 0.5rem;
+            text-align: left;
+            font-style: normal;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .quote-citation {
+                font-size: calc(var(--citation-font-size) * 0.9);
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 530px) {
+            .container {
+                padding: 1.5625rem;
+            }
+
+            /* h1 {
+                font-size: 1.5rem;
+            } */
+
+            .info-group {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .copy-btn {
+                margin-top: 0.75rem;
+                width: 100%;
+                height: var(--copy-btn-height);
+            }
+        }
+
+
+        ul.dash {
+            list-style: none;
+            margin-left: 0;
+            padding-left: 1em;
+        }
+
+        ul.dash>li:before {
+            display: inline-block;
+            content: "-";
+            width: 1em;
+            margin-left: -1em;
+        }
+
+        .spacing {
+            height: 1rem;
+        }
+
+        .spacing-small {
+            height: 0.5rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Przekaż 1,5% podatku dla Karoliny</h1>
+        <div class="info-group">
+            <div class="info-text"> <strong>Numer KRS:</strong><br> 0000270809 </div> <button class="copy-btn"
+                data-type="numerKrs">Kopiuj numer KRS</button>
+        </div>
+        <div class="info-group">
+            <div class="info-text"> <strong>Cel szczegółowy 1,5%:</strong><br> Lembicz, 18801 </div> <button
+                class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy 1,5%</button>
+        </div>
+    </div>
+    <div class="disclaimer-container">
+        <p class="disclaimer"> W grudniu 2023 roku, bliska mi osoba, Karolina, usłyszała diagnozę: NMOSD.
+        </p>
+    </div>
+
+    <figure class="quote-block">
+        <blockquote>
+            <p class="spaced-paragraph">
+                <strong>Naturalny przebieg NMOSD jest zazwyczaj ciężki, dramatyczny.</strong> Procesy zapalne w
+                ośrodkowym układzie nerwowym prowadzą do ciężkich rzutów, które powodują postępujące pogorszenie się
+                stanu neurologiczcznego i nieodwracalną niepełnosprawność.
+                <strong>Remisje (czyli czas po rzucie) nie są całkowite.</strong> Średnio 1 na 3 osoby już po pierwszym
+                rzucie choroby wymaga
+                <strong>wózka inwalidzkiego</strong>. NMOSD charakteryzuje niestety duża śmiertelność - w ciągu
+                pierwszych 15 lat umiera nawet 23% chorych.
+            </p>
+
+            <div class="spacing"></div>
+
+            <p class="symptom-intro">Objawy NMOSD:</p>
+            <ul class="dash">
+                <li>niedowład kończyn o umiarkowanym lub
+                    ciężkim nasileniu i osłabienie mięśni;</li>
+                <li>nawracające zapalenie nerwów wzrokowych i idące za tym: ból gałki ocznej, ograniczenia pola widzenia
+                    a nawet całkowita utrata widzenia;</li>
+                <li>trudna w leczeniu czkawka, nudności i wymioty; zawroty głowy, neuralgia nerwu trójdzielnego,
+                    niezborność ruchów, problemy z przełykaniem;</li>
+                <li>świąd, zaburzenia snu i narkolepsja , zaburzenia pracy pęcherza moczowego i jelit;</li>
+                <li>utrata „czucia” o zmiennym nasileniu.</li>
+            </ul>
+
+            <div class="spacing"></div>
+
+            <p class="spaced-paragraph">NMOSD powoduje również utrzymujący się ból i zmęczenie.</p>
+
+        </blockquote>
+
+        <cite class="quote-citation">Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd" target="_blank">
+                https://ptsr.org.pl/strona/160,co-to-jest-nmosd</a></cite>
+
+    </figure>
+
+    <div class="disclaimer-container2">
+        <p class="disclaimer ">Proszę Cię o wsparcie.</p>
+        <div class="spacing-small"></div>
+
+        <p class="disclaimer">Choroba wymaga przyjmowania silnych leków i stałej opieki
+            lekarzy i fizjoterapeutów. Twoje 1,5% podatku
+            trafi bezpośrednio do Karoliny za pośrednictwem fundacji Avalon, która zajmuje się pomocą osobom
+            niepełnosprawnym.
+        </p>
+    </div>
+    <div class="disclaimer-container">
+        <p class="disclaimer">Uprawnienia fundacji Avalon do otrzymania 1,5% podatku można sprawdzić na stronie
+            rządowej: <br><a href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
+                https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a>
+        <p class="disclaimer">Przykład wypełnienia deklaracji PIT:<br><a
+                href="https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku" target="_blank">
+                https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku </a>
+        </p>
+    </div>
+    <script> document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', function () { const type = btn.getAttribute('data-type'); const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801"; const originalText = btn.textContent; navigator.clipboard.writeText(text).then(() => { btn.classList.add('copied'); btn.textContent = 'Skopiowano do schowka'; setTimeout(() => { btn.classList.remove('copied'); btn.textContent = originalText; }, 1500); }); }); }); </script>
+</body>
+
+</html>
