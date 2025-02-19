@@ -52,18 +52,15 @@
 
         a:visited {
             color: #3d6445;
-            /* 20% darker than #4d7e55 */
         }
 
         a:hover {
             color: #5a9263;
-            /* 10% lighter for hover effect */
             text-decoration: underline;
         }
 
         a:active {
             color: #2d4a32;
-            /* Even darker for active state */
         }
 
         .container {
@@ -73,7 +70,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
             max-width: var(--max-container-width);
             width: 100%;
-            margin-top: 1rem;
+            margin: 1rem auto;
         }
 
         h1 {
@@ -228,10 +225,6 @@
                 padding: 1.5625rem;
             }
 
-            /* h1 {
-                font-size: 1.5rem;
-            } */
-
             .info-group {
                 flex-direction: column;
                 align-items: flex-start;
@@ -243,7 +236,6 @@
                 height: var(--copy-btn-height);
             }
         }
-
 
         ul.dash {
             list-style: none;
@@ -266,18 +258,23 @@
             height: 0.5rem;
         }
     </style>
+
 </head>
 
-<body>
+<div id="protected-content" style="display: none;">
     <div class="container">
         <h1>Przekaż 1,5% podatku dla Karoliny</h1>
         <div class="info-group">
-            <div class="info-text"> <strong>Numer KRS:</strong><br> 0000270809 </div> <button class="copy-btn"
-                data-type="numerKrs">Kopiuj numer KRS</button>
+            <div class="info-text">
+                <strong>Numer KRS:</strong><br> 0000270809
+            </div>
+            <button class="copy-btn" data-type="numerKrs">Kopiuj numer KRS</button>
         </div>
         <div class="info-group">
-            <div class="info-text"> <strong>Cel szczegółowy 1,5%:</strong><br> Lembicz, 18801 </div> <button
-                class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy 1,5%</button>
+            <div class="info-text">
+                <strong>Cel szczegółowy 1,5%:</strong><br> Lembicz, 18801
+            </div>
+            <button class="copy-btn" data-type="celSzczegolowy">Kopiuj cel szczegółowy 1,5%</button>
         </div>
     </div>
     <div class="disclaimer-container">
@@ -290,8 +287,9 @@
             <p class="spaced-paragraph">
                 <strong>Naturalny przebieg NMOSD jest zazwyczaj ciężki, dramatyczny.</strong> Procesy zapalne w
                 ośrodkowym układzie nerwowym prowadzą do ciężkich rzutów, które powodują postępujące pogorszenie się
-                stanu neurologiczcznego i nieodwracalną niepełnosprawność.
-                <strong>Remisje (czyli czas po rzucie) nie są całkowite.</strong> Średnio 1 na 3 osoby już po pierwszym
+                stanu neurologicznego i nieodwracalną niepełnosprawność.
+                <strong>Remisje (czyli czas po rzucie) nie są całkowite.</strong> Średnio 1 na 3 osoby już po
+                pierwszym
                 rzucie choroby wymaga
                 <strong>wózka inwalidzkiego</strong>. NMOSD charakteryzuje niestety duża śmiertelność - w ciągu
                 pierwszych 15 lat umiera nawet 23% chorych.
@@ -303,45 +301,100 @@
             <ul class="dash">
                 <li>niedowład kończyn o umiarkowanym lub
                     ciężkim nasileniu i osłabienie mięśni;</li>
-                <li>nawracające zapalenie nerwów wzrokowych i idące za tym: ból gałki ocznej, ograniczenia pola widzenia
+                <li>nawracające zapalenie nerwów wzrokowych i idące za tym: ból gałki ocznej, ograniczenia pola
+                    widzenia
                     a nawet całkowita utrata widzenia;</li>
                 <li>trudna w leczeniu czkawka, nudności i wymioty; zawroty głowy, neuralgia nerwu trójdzielnego,
                     niezborność ruchów, problemy z przełykaniem;</li>
-                <li>świąd, zaburzenia snu i narkolepsja , zaburzenia pracy pęcherza moczowego i jelit;</li>
+                <li>świąd, zaburzenia snu i narkolepsja, zaburzenia pracy pęcherza moczowego i jelit;</li>
                 <li>utrata „czucia” o zmiennym nasileniu.</li>
             </ul>
 
             <div class="spacing"></div>
 
             <p class="spaced-paragraph">NMOSD powoduje również utrzymujący się ból i zmęczenie.</p>
-
         </blockquote>
 
-        <cite class="quote-citation">Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd" target="_blank">
-                https://ptsr.org.pl/strona/160,co-to-jest-nmosd</a></cite>
-
+        <cite class="quote-citation">
+            Źródło: <a href="https://ptsr.org.pl/strona/160,co-to-jest-nmosd" target="_blank">
+                https://ptsr.org.pl/strona/160,co-to-jest-nmosd</a>
+        </cite>
     </figure>
 
     <div class="disclaimer-container2">
-        <p class="disclaimer ">Proszę Cię o wsparcie.</p>
+        <p class="disclaimer">Proszę Cię o wsparcie.</p>
         <div class="spacing-small"></div>
-
-        <p class="disclaimer">Choroba wymaga przyjmowania silnych leków i stałej opieki
-            lekarzy i fizjoterapeutów. Twoje 1,5% podatku
-            trafi bezpośrednio do Karoliny za pośrednictwem fundacji Avalon, która zajmuje się pomocą osobom
-            niepełnosprawnym.
+        <p class="disclaimer">
+            Choroba wymaga przyjmowania silnych leków i stałej opieki
+            lekarzy i fizjoterapeutów. <strong>Twoje 1,5% podatku
+                trafi bezpośrednio do Karoliny</strong> za pośrednictwem fundacji Avalon, która zajmuje się pomocą
+            osobom niepełnosprawnym.
         </p>
     </div>
+
     <div class="disclaimer-container">
-        <p class="disclaimer">Uprawnienia fundacji Avalon do otrzymania 1,5% podatku można sprawdzić na stronie
-            rządowej: <br><a href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
+        <p class="disclaimer">
+            Uprawnienia fundacji Avalon do otrzymania 1,5% podatku można sprawdzić na stronie
+            rządowej: <br>
+            <a href="https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809" target="_blank">
                 https://niw.gov.pl/opp/wykaz-opp/?oppcatalog%5Bkrs%5D=0000270809 </a>
-        <p class="disclaimer">Przykład wypełnienia deklaracji PIT:<br><a
-                href="https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku" target="_blank">
+        </p>
+        <p class="disclaimer">
+            Przykład wypełnienia deklaracji PIT:<br>
+            <a href="https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku" target="_blank">
                 https://www.fundacjaavalon.pl/jak_nam_pomoc/1-5-procent-podatku </a>
         </p>
     </div>
-    <script> document.querySelectorAll('.copy-btn').forEach(btn => { btn.addEventListener('click', function () { const type = btn.getAttribute('data-type'); const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801"; const originalText = btn.textContent; navigator.clipboard.writeText(text).then(() => { btn.classList.add('copied'); btn.textContent = 'Skopiowano do schowka'; setTimeout(() => { btn.classList.remove('copied'); btn.textContent = originalText; }, 1500); }); }); }); </script>
-</body>
 
-</html>
+    <script>
+        document.querySelectorAll('.copy-btn').forEach(btn => {
+            btn.addEventListener('click', function () {
+                const type = btn.getAttribute('data-type');
+                const text = type === 'numerKrs' ? "0000270809" : "Lembicz, 18801";
+                const originalText = btn.textContent;
+                navigator.clipboard.writeText(text).then(() => {
+                    btn.classList.add('copied');
+                    btn.textContent = 'Skopiowano do schowka';
+                    setTimeout(() => {
+                        btn.classList.remove('copied');
+                        btn.textContent = originalText;
+                    }, 1500);
+                });
+            });
+        });
+    </script>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", async function () {
+            const storedHash =
+                "a6523e505c32ceed84a037dcca26d64c060fecfbec1fef1c11380df7fe67814bcc7293f0b19e148af58c6597155b00add56bedb7fe7dc1c4c74e22d8b0b5b361";
+
+            const userInput = prompt("Podaj hasło:");
+
+            async function computeSHA512(str) {
+                const encoder = new TextEncoder();
+                const data = encoder.encode(str);
+                const hashBuffer = await crypto.subtle.digest("SHA-512", data);
+                const hashArray = Array.from(new Uint8Array(hashBuffer));
+                const hashHex = hashArray
+                    .map((b) => b.toString(16).padStart(2, "0"))
+                    .join("");
+                return hashHex;
+            }
+
+            // Compute hash for the user's input
+            const computedHash = await computeSHA512(userInput);
+            console.log("Computed hash:", computedHash);
+
+            if (computedHash === storedHash) {
+                const content = document.getElementById("protected-content");
+                if (content) {
+                    content.style.display = "block";
+                }
+            } else {
+                document.body.innerHTML = "";
+            }
+        });
+    </script>
+
+</div>
